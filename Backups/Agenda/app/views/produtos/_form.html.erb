@@ -1,0 +1,45 @@
+<%= form_for(produto) do |f| %>
+  <% if produto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(produto.errors.count, "error") %> prohibited this produto from being saved:</h2>
+
+      <ul>
+      <% produto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= f.label :foto %>
+    <%= f.file_field :foto %>
+  </div>
+  <div class="row">  
+  <div class="field form-group col-xs-10">
+    <%= f.label :titulo %>
+    <%= f.text_field :titulo, class: 'form-control' %>
+  </div> 
+
+  <div class="field form-group col-xs-2">
+    <%= f.label :quantidade %>
+    <%= f.number_field :quantidade, class: 'form-control'  %>
+  </div>      
+  </div>
+
+  <div class="row">  
+    <div class="field form-group col-xs-12">
+      <%= f.label :descricao %>
+      <%= f.text_area :descricao, class: 'form-control' %>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="actions col-xs-12 text-right">
+      <%= f.submit 'Salvar', class: 'btn btn-primary' %>
+    </div>
+  </div>
+  
+<% end %>

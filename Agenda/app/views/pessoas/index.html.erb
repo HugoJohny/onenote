@@ -1,0 +1,41 @@
+<div class="page-header">
+  <%= link_to new_pessoa_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Pessoa
+  <% end %>
+  <h1>Listing pessoas</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Nome</th>
+            <th>Fantasia</th>
+            <th>Comercial</th>
+            <th>Celular</th>
+            <th>Residencial</th>
+            <th>Email</th>
+
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @pessoas) do |pessoa| %>
+            <td><%= pessoa.nome %></td>
+            <td><%= pessoa.fantasia %></td>
+            <td><%= pessoa.comercial %></td>
+            <td><%= pessoa.celular %></td>
+            <td><%= pessoa.residencial %></td>
+            <td><%= pessoa.email %></td>
+
+            <td><%= link_to 'Show', pessoa %></td>
+        <td><%= link_to 'Edit', edit_pessoa_path(pessoa) %></td>
+        <td><%= link_to 'Destroy', pessoa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

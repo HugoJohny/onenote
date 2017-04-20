@@ -1,0 +1,29 @@
+<div class="page-header">
+  <%= link_to new_po_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Po
+  <% end %>
+  <h1>Listing pos</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Descricao</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @pos) do |po| %>
+            <td><%= po.descricao %></td>
+            <td><%= link_to 'Ver', po %></td>
+        <td><%= link_to 'Editar', edit_po_path(po) %></td>
+        <td><%= link_to 'Excluir', po, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

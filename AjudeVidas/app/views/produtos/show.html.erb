@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Foto:</strong>
+  <%= image_tag @produto.foto %>
+</p>
+
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @produto.titulo %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @produto.descricao %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @produto.endereco %>
+</p>
+
+<p>
+  <strong>Latidade:</strong>
+  <%= @produto.latidade %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @produto.longitude %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @produto.status %>
+</p>
+
+<p>
+  <strong>Quantidade:</strong>
+  <%= @produto.quantidade %>
+</p>
+
+<p>
+  <strong>Pessoa:</strong>
+  <%= @produto.pessoa.nome %>
+</p>
+
+<%= link_to 'Edit', edit_produto_path(@produto) %> |
+<%= link_to 'Back', produtos_path %>
+
+
+
+<div class="embed-responsive embed-responsive-16by9">  
+  <iframe width="560" height="315" src="<%= @produto.descricao %>" frameborder="0" allowfullscreen></iframe>
+</div>
+

@@ -1,0 +1,32 @@
+<%= form_for(interess) do |f| %>
+  <% if interess.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(interess.errors.count, "error") %> prohibited this interess from being saved:</h2>
+
+      <ul>
+      <% interess.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :produto_id %>
+    <%= f.text_field :produto_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pessoa_id %>
+    <%= f.text_field :pessoa_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

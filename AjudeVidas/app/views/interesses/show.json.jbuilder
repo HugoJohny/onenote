@@ -1,0 +1,1 @@
+json.partial! "interesses/interess", interess: @interess

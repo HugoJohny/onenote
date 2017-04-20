@@ -1,0 +1,14 @@
+					sistema para academia
+
+ - autenticação de usuarios (Devaise)
+ - cadastro de alunos (nome, data de nascimento, sexo, endereço, telefone, e-mail, senha)
+ - cadastro de treino (descrição)
+ - cadastro de medidas (ver ficha) 
+ - cadastro de dieta (dieta)
+ - cadastro de ficha (relação com trieno, repetição)
+ - cadastro de funcionarios (nome, endereço, ativadade)
+ - controle de acesso
+ - renovação do plano
+ - cadastro de serviços (lutas, danças, academia, natação, etc...)
+ - cadastro de planos (combos)
+
